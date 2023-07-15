@@ -1,0 +1,16 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair&family=Varela+Round&family=Ysabeau+Office:wght@300;400;500&display=swap');
+
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playfair', serif;
+  font-family: 'Varela Round', sans-serif;
+  font-family: 'Ysabeau Office', sans-serif;
+}
