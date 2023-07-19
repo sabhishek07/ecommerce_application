@@ -1,14 +1,24 @@
-
+import { BrowserRouter as Router, Switch,Routes, Route, Link } from "react-router-dom";
 import './App.css';
-import Footer from './Components/Layout/Footer';
-import Layout from './Components/Layout/Layout';
+import Login from './Pages/Login.js';
+import Home from './Pages/Home.js';
+import Register from './Pages/Register.js';
+import Cart from './Pages/Cart.js';
+
 
 function App() {
   return (
    <>
-  <Layout>
-   Buykar
-  </Layout>
+     <Router>
+      <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Cart" element={<Cart/>} />
+       
+      </Routes>
+    </Router>
+  
    </>
   );
 }
