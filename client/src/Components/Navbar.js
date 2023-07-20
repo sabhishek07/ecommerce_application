@@ -8,7 +8,7 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
 
-import { NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -29,16 +29,16 @@ const Navbar = () => {
           }>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <NavLink to="/Login">Login</NavLink>
+              <Link to="/login">Login</Link>
             </li>
             <li>
-              <NavLink to="/Register">Register</NavLink>
+              <Link to="/register">Register</Link>
             </li>
             <li>
-              <NavLink to="/Cart">Cart</NavLink>
+              <Link to="/cart">Cart(0)</Link>
             </li>
           </ul>
         </div>
