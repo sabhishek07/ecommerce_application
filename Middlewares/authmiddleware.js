@@ -1,6 +1,4 @@
 import jwt from "jsonwebtoken";
-
-
 export const requiresign=(req,res,next)=>{
 
     try {

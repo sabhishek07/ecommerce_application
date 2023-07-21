@@ -1,10 +1,42 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import { useState } from 'react';
+import './Register.css';
 
 const Register = () => {
+    const[email,setEmail]=useState("");
+    const[name,setName]=useState("");
+    const[password,setPassword]=useState("");
+    const[mobile,setMobile]=useState("");
+    const [state,Setstate]=useState("");
+   const handlesubmit=(e)=>{
+    e.preventDefault()
+    console.log(name,email);
+    
+    
+   }
+
+   
+    
   return (
-    <div>
-        register
+    <div className='App'>
+ <div className="auth-form-container">
+            <h2>Register</h2>
+        <form className="register-form" onSubmit={handlesubmit} >
+            <label htmlFor="name">Full name</label>
+            <input value={name} required  name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" />
+            <label htmlFor="email">email</label>
+            <input value={email} required onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+            <label htmlFor="password">password</label>
+            <input value={mobile} required onChange={(e) => setMobile(e.target.value)}type="tel" placeholder="Mobile no." id="email" name="email" />
+            <label htmlFor="password">password</label>
+           
+            <input value={password} required onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+            <button >Register</button>
+        </form>
+        <button className="link-btn">Already have an account? Login here.</button>
+    </div>
+  
       
     </div>
   )
