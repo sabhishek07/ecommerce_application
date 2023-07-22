@@ -103,3 +103,8 @@ export  const registercontroller=  async(req,res)=>{
 
 }
 
+export const testcontroller=(req,res,)=>{
+   res.send("protected")
+
+}
+
