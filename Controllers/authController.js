@@ -22,7 +22,7 @@ export  const registercontroller=  async(req,res)=>{
             const newUser= await new users({name,email,mobile,password:hashed}).save();
 
             res.status(201).send({
-                sucess:true,
+                sucess:false,
                 message:"User registered succesfuly",
               newUser
 
@@ -73,8 +73,10 @@ export  const registercontroller=  async(req,res)=>{
                     sucess:true,
                     message:"login sucessfully",
                     user:{
+                        _id:user._id,
                         name:user.name,
-                        mobile:user.mobile
+                        mobile:user.mobile,
+                        role:user.role
 
                     },token
                 })
@@ -87,7 +89,6 @@ export  const registercontroller=  async(req,res)=>{
             })
         }
         }
-
 
         
     } catch (error) {

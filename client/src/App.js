@@ -5,6 +5,8 @@ import Home from './Pages/Home.js';
 import Register from './Pages/Register.js';
 import Cart from './Pages/Cart.js';
 import Navbar from './Components/Navbar.js';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -16,9 +18,11 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/cart" element={<Cart/>}/>
+
    
      
       </Routes>
+      <ToastContainer />
    </div>
   );
 }
