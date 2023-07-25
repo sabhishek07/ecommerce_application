@@ -5,13 +5,13 @@ const AuthContext=creatContext();
 
 
 const AuthProvider=({childen})=>{
-    const[auth,setauth]=useState({
+    const[auth,setAuth]=useState({
         user:null,
         token:""
     })
     return(
-        <AuthContext.Provider>
-            {children}
+        <AuthContext.Provider value={[auth,setAuth]}>
+            {/* {children} */}
          </AuthContext.Provider>
     )
 
