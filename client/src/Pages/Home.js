@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
-import { useAuth } from '../context/auth'
+import Navbar from '../Components/Navbar.js'
+import { useAuth } from '../context/auth.js'
 
 const Home = () => {
   const [auth,setAuth]=useAuth();

@@ -4,6 +4,7 @@ import morgan from "morgan";
 import connectiondb from "./config/db.js";
 import authroutes from "./Routes/authroutes.js";
 import category from './Routes/category.js';
+import productroutes from './Routes/productroutes.js'
 import cors from  'cors';
 
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(morgan('dev'))
 app.use('/api/v1/auth',authroutes);
 app.use('/api/v1/category',category);
+app.use('/api/v1/product',productroutes)
 
 
 app.get('/',(req,res)=>{

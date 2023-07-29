@@ -1,6 +1,6 @@
 import express from 'express';
-import { isadmin, requiresign } from '../Middlewares/authmiddleware';
-import { createCategoryController, deletecategroyController, getSinglecategoryController, getallcategoryController, updatecategroyController } from '../Controllers/categoryController';
+import { isadmin, requiresign } from '../Middlewares/authmiddleware.js';
+import { createCategoryController, deletecategroyController, getSinglecategoryController, getallcategoryController, updatecategroyController } from '../Controllers/categoryController.js';
 
 const router =express.Router()
 
