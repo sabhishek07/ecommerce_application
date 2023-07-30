@@ -1,9 +1,9 @@
 import slugify from "slugify";
 import products from "../Models/products";
-import products from "../Models/products";
+
 import fs from 'fs';
 
-export const createproductController=async()=>{
+export const createproductController=async(req,res)=>{
     try{
     const{name,description,category,slug,quantity,price,shiping}=req.fields;
     const{photo}=req.files;
@@ -42,4 +42,25 @@ catch(error){
 
 }
   
+}
+//get all product
+export const getallproductController=async(req,res)=>{
+    try {
+        const getProduct=await products.find({}).select("-photo").limit(12).sort({createdAt:-1})
+        req.status(200).send({
+            success:true,
+            message:"get all products",
+            getProduct
+        })
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:"error while fetching al products",
+            error
+        })
+        
+    }
+
 }
