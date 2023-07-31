@@ -64,3 +64,19 @@ export const getallproductController=async(req,res)=>{
     }
 
 }
+//get single product
+export const singleProductController=async(req,res)=>{
+    try {
+        const{id}=req.params;
+        const singleProduct=await products.findOne({id}).select('-photo').populate("category")
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:"not getting products"
+        })
+        
+    }
+
+}
