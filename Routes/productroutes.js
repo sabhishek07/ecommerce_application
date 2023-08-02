@@ -1,6 +1,6 @@
 import express from "express";
-import { isadmin, requiresign } from "../Middlewares/authmiddleware";
-import { PhotoProductController, UpdateproductController, createproductController, deleteProductController, getallproductController, singleProductController } from "../Controllers/ProductController";
+import { isadmin, requiresign } from "../Middlewares/authmiddleware.js";
+import { PhotoProductController, UpdateproductController, createproductController, deleteProductController, getallproductController, singleProductController } from "../Controllers/ProductController.js";
 import formidable from 'express-formidable'
 
 

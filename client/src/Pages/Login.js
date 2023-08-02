@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar'
 import { useState } from 'react';
 import {  toast } from 'react-toastify';
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from '../context/auth.js';
 
 
@@ -13,6 +13,7 @@ const Login = () => {
     const[password,setPassword]=useState("");
     const [auth,setAuth]=useAuth();
     const navigate = useNavigate();
+   const location = useLocation();
 
     const handlesubmit= async(e)=>{
       e.preventDefault()
@@ -25,8 +26,8 @@ const Login = () => {
           user:res.data.user,
           token:res.data.token
         })
-        navigate("/", { replace: true })
-  
+       localStorage.setItem('users',JSON.stringify(res.data));
+        navigate(location.state || "/");
       }
       else{
         toast.error(res.data.message)
