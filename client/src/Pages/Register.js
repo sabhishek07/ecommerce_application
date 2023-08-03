@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import {  toast } from 'react-toastify';
+import toast from "react-hot-toast";
 import { useState } from 'react';
 import './Register.css';
 import axios from "axios";

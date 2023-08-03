@@ -5,7 +5,7 @@ import Home from './Pages/Home.js';
 import Register from './Pages/Register.js';
 import Cart from './Pages/Cart.js';
 import Navbar from './Components/Navbar.js';
-import { ToastContainer, toast } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
   import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
 
       </Routes>
-      <ToastContainer />
+      <Toaster />
    </div>
   );
 }
