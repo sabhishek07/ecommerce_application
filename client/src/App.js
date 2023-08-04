@@ -6,6 +6,7 @@ import Register from './Pages/Register.js';
 import Cart from './Pages/Cart.js';
 import Navbar from './Components/Navbar.js';
 import toast, { Toaster } from 'react-hot-toast';
+import AdminDashboard from "./Pages/AdminDashboard.js";
   import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/AdminDashbaord" element={<AdminDashboard/>}/>
 
       </Routes>
       <Toaster />
