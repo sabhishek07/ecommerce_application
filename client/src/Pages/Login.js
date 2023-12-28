@@ -25,7 +25,8 @@ const Login = () => {
           user:res.data.user,
           token:res.data.token
         })
-    localStorage.setItem('users',JSON.stringify(res.data));
+        const myjson=JSON.stringify(res.data)
+    localStorage.setItem('users',myjson);
      
         navigate(location.state || "/");
       }
